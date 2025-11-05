@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ProfileCard from './components/ProfileCard.jsx';
+import AddProfile from './components/AddProfile.jsx';
 import { profiles } from './data/profiles.js';
 import { useState } from 'react';
 
@@ -12,6 +13,7 @@ export default function App() {
   return (
     <Container className="py-4">
       <h1 className="mb-4 text-center">Profiles</h1>
+      <AddProfile people={people} setPeople={setPeople} />  
       <Row xs={1} md={2} lg={3}>
         {people.map(p => (
           <Col key={p.id}>
